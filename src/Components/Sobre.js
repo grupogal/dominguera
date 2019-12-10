@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import img from '../assets/DSC_0184.jpg'
+import Img from 'react-image'
+import img2 from '../assets/spinner.gif'
 class Sobre extends Component{
     constructor(props){
         super(props)
@@ -25,12 +27,12 @@ class Sobre extends Component{
             <div>
                 <section title='Descripción de la hacienda' className = 'flex flex-row justify-between  mt-40'>
                     <div title='imagen' className='flex flex-row w-1/2' >
-                        <img src={img} alt='' className='object-contain h-full pr-12' title='Imagen de arbol hacienda'/>
+                        <Img src={img} alt='' className='object-contain h-screen pr-12' title='Imagen de arbol hacienda' loader={<img src={img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                     </div>
                     <div title='texto de la descripción' className='w-1/2 p-20 pl-0 pr-24'>
                         <h2 className='text-left font-sans font-bold text-5xl'>SOBRE</h2>
                         <h2 className='mb-5 text-left font-sans font-bold text-5xl'>NOSOTROS</h2>
-                        <p className='mb-3 text-justify'>La hacienda La Dominguera inicio trabajos de mejoramiento genético especializado en la producción de leche hace más de 35 años y para esto, inicialmente se adquirieron animales de raza Holstein puro con registro y se inicio cruzamiento con otras razass como Jersey y Rojo sueco; esto con el fin de desarrollar una vaca eficiente, funcional y adaptada a nuestras condiciones topográficas y climáticas.</p>
+                        <p className='mb-3 text-justify'>La hacienda La Dominguera inicio trabajos de mejoramiento genético especializado en la producción de leche hace más de 35 años y para esto, inicialmente se adquirieron animales de raza Holstein puro con registro y se inicio cruzamiento con otras razas como Jersey y Rojo sueco; esto con el fin de desarrollar una vaca eficiente, funcional y adaptada a nuestras condiciones topográficas y climáticas.</p>
                         <p className='mb-3 text-justify'>
                             Estos cruces nos proporcionan vigor híbrido, fortaleza, resistencia, adaptación al pastores y regulación de tamaño, pues consideramos que una de las condiciones fenotípicas primordiales es la estructura o tamaño del animal, el cual debe ser de tamaño mediano y debe tener la piel bien pigmentada, bien estructurado y de patas fuertes, así como longevidad y alta producción. Todo este proceso se ha desarrollado a través de la transferencia de embriones y la inseminación artificial utilizando semen de los mejores toros del mundo de cada raza.
                         </p>
@@ -48,7 +50,7 @@ class Sobre extends Component{
                         
                         <div title='texto de la descripción' className='w-full pl-4 pr-4'>
                             <h2 className='text-center font-sans font-bold text-3xl mb-5'>SOBRE NOSOTROS</h2>
-                            <p className='mb-3 text-justify'>La hacienda La Dominguera inicio trabajos de mejoramiento genético especializado en la producción de leche hace más de 35 años y para esto, inicialmente se adquirieron animales de raza Holstein puro con registro y se inicio cruzamiento con otras razass como Jersey y Rojo sueco; esto con el fin de desarrollar una vaca eficiente, funcional y adaptada a nuestras condiciones topográficas y climáticas.</p>
+                            <p className='mb-3 text-justify'>La hacienda La Dominguera inicio trabajos de mejoramiento genético especializado en la producción de leche hace más de 35 años y para esto, inicialmente se adquirieron animales de raza Holstein puro con registro y se inicio cruzamiento con otras razas como Jersey y Rojo sueco; esto con el fin de desarrollar una vaca eficiente, funcional y adaptada a nuestras condiciones topográficas y climáticas.</p>
                             <p className='mb-3 text-justify'>
                                 Estos cruces nos proporcionan vigor híbrido, fortaleza, resistencia, adaptación al pastores y regulación de tamaño, pues consideramos que una de las condiciones fenotípicas primordiales es la estructura o tamaño del animal, el cual debe ser de tamaño mediano y debe tener la piel bien pigmentada, bien estructurado y de patas fuertes, así como longevidad y alta producción. Todo este proceso se ha desarrollado a través de la transferencia de embriones y la inseminación artificial utilizando semen de los mejores toros del mundo de cada raza.
                             </p>
@@ -57,7 +59,7 @@ class Sobre extends Component{
                            </p>
                         </div>
                         <div title='imagen' className='flex flex-row w-full  mb-12' >
-                            <img src={img} alt='' className='object-contain h-full lg:pl-8 lg:pr-8 md:pl-6 md:pr-6 pl-2 pr-2' title='Imagen de arbol hacienda'/>
+                            <Img src={img} alt='' className='object-contain h-halfScreen lg:pl-8 lg:pr-8 md:pl-6 md:pr-6 pl-2 pr-2' title='Imagen de arbol hacienda' loader={<img src={img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                         </div>
                     </section>
                 </div>

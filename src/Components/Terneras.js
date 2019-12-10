@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import img from '../assets/VACAS/LEVANTAMIENTO DE TERNERAS/DSC_0265.jpg'
+import img from '../assets/VACAS/LEVANTAMIENTO DE TERNERAS/DSC_0265.jpg';
+import Img from 'react-image'
+import Img2 from '../assets/spinner.gif'
 class Terneras extends Component{
     constructor(props){
         super(props)
@@ -25,7 +27,7 @@ class Terneras extends Component{
             <div>
             <section title='Descripción de la hacienda' className = 'flex flex-row justify-between max-h-screen mt-32'>
                 <div title='imagen' className='flex flex-row w-1/2 items-center' >
-                    <img src={img} alt=''className='w-full pr-4 pb-8' title='Imagen de arbol hacienda'/>
+                    <Img src={img} alt=''className='w-full pr-4 pb-8' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                 </div>
                 <div title='texto de la descripción' className='w-1/2 p-20 pr-24'>
                     <h2 className='text-right font-sans font-bold text-5xl'>LEVANTAMIENTO</h2>
@@ -58,7 +60,7 @@ class Terneras extends Component{
                        </p>
                     </div>
                     <div title='imagen' className='flex flex-row w-full items-center mb-8' >
-                        <img src={img} alt='' className='pr-4 pl-4' title='Imagen de arbol hacienda'/>
+                        <Img src={img} alt='' className='pr-4 pl-4' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                     </div>
                 </section>
             </div>

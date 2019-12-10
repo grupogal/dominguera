@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import img from '../assets/DSC_0325.jpg'
+import img from '../assets/LECHE/DSC_0459.jpg'
+import Img from 'react-image'
+import Img2 from '../assets/spinner.gif'
 class SistemaOrdeno extends Component{
     constructor(props){
         super(props)
@@ -26,7 +28,7 @@ class SistemaOrdeno extends Component{
                     <section title='Descripción de la hacienda' className = 'flex flex-row justify-between max-h-screen mb-8 mt-32'>
                         
                     <div title='imagen' className='flex flex-row w-1/2 pr-16' >
-                            <img src={img} className='object-contain h-full w-full object-right' title='Imagen de arbol hacienda'/>
+                            <Img src={img} className='object-contain h-full w-full object-right' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                         </div>
     
                         <div className='flex flex-column justify-center w-1/2'>
@@ -52,11 +54,11 @@ class SistemaOrdeno extends Component{
         else{
             return(
                 <div>
-                    <section title='Descripción de la hacienda' className = 'flex flex-col justify-between max-h-screen mb-8 mt-24'>
+                    <section title='Descripción de la hacienda' className = 'flex flex-col justify-between max-h-full mb-8 mt-24'>
                         
                     
     
-                        <div className='flex flex-column items-center w-full'>
+                        <div className='flex flex-column items-center w-full '>
                         <div title='texto de la descripción' className=' center w-4/5 '>
                             <h2 className='text-center font-sans font-bold text-5xl'>SISTEMA</h2>
                             <h2 className='mb-5 text-center font-sans font-bold text-5xl'>DE ORDEÑO</h2>
@@ -72,7 +74,7 @@ class SistemaOrdeno extends Component{
                         </div>  
                         </div>
                         <div title='imagen' className='flex flex-row w-7/8 pr-2 pl-2 ' >
-                            <img src={img} className='object-contain h-full w-full object-right' title='Imagen de arbol hacienda'/>
+                            <Img src={img} className='object-contain h-full w-full object-right' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                         </div>
                     </section>
                 </div>

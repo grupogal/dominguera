@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import img from '../assets/A.jpg'
+import Img from 'react-image'
+import Img2 from '../assets/spinner.gif'
 class Cuidado extends Component{
     constructor(props){
         super(props)
@@ -35,7 +37,7 @@ class Cuidado extends Component{
                 </div>
                 
                 <div title='imagen' className='w-1/2' >
-                    <img src={img} className='object-contain h-full w-full object-right' title='Imagen de arbol hacienda'/>
+                    <Img src={img} className='object-contain h-full w-full object-right' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                 </div>
             </section>
         </div>
@@ -55,7 +57,7 @@ class Cuidado extends Component{
                 
                     
                     <div title='imagen' className='w-full pr-4 pl-4' >
-                        <img src={img} className='object-contain' title='Imagen de arbol hacienda'/>
+                        <Img src={img} className='object-contain' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                     </div>
                 </section>
             </div>

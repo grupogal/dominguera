@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import img from '../assets/DSC_0264.jpg'
+import Img from 'react-image'
+import Img2 from '../assets/spinner.gif'
 class Mejoramiento extends Component{
     constructor(props){
         super(props)
@@ -39,7 +41,7 @@ class Mejoramiento extends Component{
                     </div>
                     
                     <div title='imagen' className='flex flex-row-reverse w-1/2' >
-                        <img src={img} className='object-contain h-full pl-12 object-right' title='Imagen de arbol hacienda'/>
+                        <Img src={img} className='object-contain h-full pl-12 object-right' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                     </div>
                 </section>
             </div>
@@ -63,7 +65,7 @@ class Mejoramiento extends Component{
                         </div>
                         
                         <div title='imagen' className='' >
-                            <img src={img} className='object-contain w-full pl-4 pr-4 mb-8' title='Imagen de arbol hacienda'/>
+                            <Img src={img} className='object-contain w-full pl-4 pr-4 mb-8' title='Imagen de arbol hacienda' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                         </div>
                     </section>
                 </div>

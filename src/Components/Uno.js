@@ -7,6 +7,8 @@ import footer from '../assets/HOME/FOOTER/Vaca_3.png'
 import Genetico from './Genetico'
 import Produccion from './Produccion'
 import NuestraRep from './NuestraRep'
+import Img from 'react-image'
+import Img2 from '../assets/spinner.gif'
 class Uno extends Component{
     constructor(props){
         super(props)
@@ -17,7 +19,7 @@ class Uno extends Component{
                 <Slider />
                 <Empresa />
                 <div className='w-full'>
-                    <img src={img} className='w-full h-screen'/>
+                    <Img src={img} className='w-full xl:h-screen h-halfScreen md:h-scren sm:h-screen' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                 </div>
                 <Genetico />
                 <Produccion/>

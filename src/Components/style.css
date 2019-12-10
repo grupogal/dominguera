@@ -38,7 +38,7 @@
     padding: .28rem .28rem !important;
 }
 .dropdown-menu{
-    background-color: grey !important;
+    background-color: white !important;
     min-width: 6.5rem !important;
 }
 }
@@ -58,13 +58,13 @@
 }
     li.nav-item{
         width:70%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 1);
         border-style: solid !important;
         border-bottom: 1px;
     }
     div.nav-item{
         width:70%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 1);
         border-style: solid !important;
         border-bottom: 1px;
     }
@@ -74,6 +74,12 @@
     .navbar-dark .nav-item:hover .nav-link{
         background-color:  rgba(0, 0, 0, 0.80) !important;
         color: white !important;
+    }
+    .linearGrad{
+        background: linear-gradient(180deg, grey 5%, transparent 95%) !important;
+    }
+    .basic-navbar-nav{
+        background-color: rgba(0,0,0,0) !important;
     }
     .btn-d{
         color: black !important;
@@ -100,7 +106,7 @@
     }
 }
 .dropdown-item{
-    color: white !important;
+    color: black !important;
 }
 
 
@@ -124,3 +130,4 @@
   .dropdown-toggle::after{
       border: 0 !important;
   }
+  

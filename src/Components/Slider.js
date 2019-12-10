@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.css";
 import { Carousel } from 'react-responsive-carousel';
-import img from '../assets/banners/Vaca_2.png'
-import img2 from '../assets/banners/Vaca_4.png'
-import img3 from '../assets/banners/Vaca_introspectiva.png'
-import img4 from '../assets/banners/Vaca_5.png'
-import img5 from '../assets/banners/Vaca_6.png'
-import img6 from '../assets/banners/Vaca_7.png'
+import img from '../assets/Vaca1.png'
+import img2 from '../assets/Vaca4.png'
+import img3 from '../assets/Vaca3.png'
+import img4 from '../assets/Vaca2.png'
+import img5 from '../assets/Vaca5.png'
+import img6 from '../assets/Vaca6.png'
 
 class Slider extends Component{
     constructor(props){
@@ -15,25 +15,25 @@ class Slider extends Component{
     }
     render(){
         return(
-            <div className = 'max-h-1/2 xl:max-h-full lg:max-h-full md:max-h-3/4 sm:max-h-1/2 mb-4'>
+            <div className = 'mb-4'>
                  <Carousel showArrows = {true} showThumbs = {false} showStatus = {false} autoPlay={true}>
-                <div className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen'>
-                    <img className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen' src={img} />
+                <div className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full'>
+                    <img className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full' src={img} />
                 </div>
-                <div className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen'>
-                    <img className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen' src={img2} />
+                <div className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full'>
+                    <img className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full' src={img2} />
                 </div>
-                <div className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen'>
-                    <img className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen' src={img3} />
+                <div className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full'>
+                    <img className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full' src={img3} />
                 </div>
-                <div className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen'>
-                    <img className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen' src={img4} />
+                <div className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full'>
+                    <img className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full' src={img4} />
                 </div>
-                <div className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen'>
-                    <img className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen' src={img5} />
+                <div className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full'>
+                    <img className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full' src={img5} />
                 </div>
-                <div className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen'>
-                    <img className='h-halfScreen xl:h-screen lg:h-screen md:h-halfScreen sm:h-halfScreen' src={img6} />
+                <div className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full'>
+                    <img className='h-full xl:h-screen lg:h-screen md:h-screen sm:h-full' src={img6} />
                 </div>
             </Carousel>
             </div>

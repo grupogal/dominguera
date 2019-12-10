@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import img from '../assets/DSC_0267.jpg'
 import './style.css'
+import Img from 'react-image'
+import Img2 from '../assets/spinner.gif'
 class NuestraRep extends Component{
     constructor(props){
         super(props)
@@ -25,7 +27,7 @@ class NuestraRep extends Component{
         return(
                 <div className=' h-auto max-w-full'>
                     <section title='Descripción de la hacienda' className = 'w-full relative text-center'>
-                        <img src={img} alt='' className=' relative w-full h-screen p-16'/>
+                        <Img src={img} alt='' className=' relative w-full h-screen p-16' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                         <section className = 'centered h-screen p-16 bg-white pl-4 pr-4 w-1/3'>
                                 <h2 className = 'text-left font-sans font-bold text-5xl mt-32'>NUESTRA</h2>
                                 <h2 className= 'text-left font-sans font-bold text-5xl mb-5'>REPUTACIÓN</h2>
@@ -44,7 +46,7 @@ class NuestraRep extends Component{
                             <p className='mb-3 text-justify'>La hacienda la dominguera en el momento es conocida y renombrada por la calidad genética de sus vacas, como lo aseguran todos nuestros clientes que han adquirido los ejemplares, así como las empresas pasteurizadoras compradoras de la leche que manifiestan y nos felicitan por la calidad de la misma.</p>
                         </section>
                         <section title='Descripción de la hacienda' className = 'w-full flex flex-col justify-center'>
-                            <img src={img} alt=''className='object-cover'/>
+                            <Img src={img} alt=''className='object-cover' loader={<img src={Img2} className='object-contain h-full w-full xl:ml-32 xl:pr-0 xl:pl-0 xl:pb-o pr-4 pl-4 mr-2'/>}/>
                         </section>    
                     </div>
                 </div>

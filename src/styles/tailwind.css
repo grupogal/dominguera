@@ -586,9 +586,9 @@ video {
   width: 100%;
 }
 
-@media (min-width: 300) {
+@media (min-width: 0px) {
   .container {
-    max-width: 300;
+    max-width: 0px;
   }
 }
 
@@ -8404,7 +8404,7 @@ video {
   z-index: auto;
 }
 
-@media (min-width: 300) {
+@media (min-width: 0px) {
   .xs\:sr-only {
     position: absolute;
     width: 1px;
