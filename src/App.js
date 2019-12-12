@@ -38,50 +38,52 @@ function App() {
 
   const [ other, setOther] = useState(false);
   const [otrino, setOtrino] = useState(false)
+  const [navExpanded, setNavExpanded] = useState(false);
   if(otrino === true){
     return(
 <Router className='w-full  '>
                     <div>
-                      <Navbar className='other linearGrad' expand="lg" variant='dark' fixed='top'>
+                      <Navbar className='other linearGrad' expand="lg" variant='dark' fixed='top' 
+                expanded={navExpanded}>
                       <div className='w-4 xl:w-12 lg:w-8 md:w-4 sm:w-2 hidden xl:block lg:block sm:block md:block'/>
                         <Navbar.Brand>
                          <img src={img} className='object-fill h-12 xl:h-24 lg:h-20 md:h-16 sm:h-12' />
                         </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {setOtrino(!otrino)}}/>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {setOtrino(!otrino); setNavExpanded(!navExpanded);}}/>
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className={'basic-navbar-nav'}>
-                        <li className='nav-item'>
-                            <Link to="/" className='nav-link'>Inicio</Link>
+                        <li className='nav-item' data-toggle="collapse" data-target=".navbar-collapse.show">
+                            <Link to="/" className='nav-link' onClick={() => {setNavExpanded(false); setOtrino(!otrino)}}>Inicio</Link>
                         </li>
-                        <NavDropdown title="Empresa" id="basic-nav-dropdown" data-toggle="dropdown" show={menu} onClick={() => {setMenu(!menu); }}>                          
+                        <NavDropdown title="Empresa" id="basic-nav-dropdown" data-toggle="dropdown" show={menu} onClick={() => {setMenu(!menu)}}>                          
                           
-                          <Link aria-controls="basic-navbar-nav" to="/sobre" className='dropdown-item' onClick= {() => {
-                                setMenu(!menu); setOther(false);
+                          <Link aria-controls="basic-navbar-nav" to="/sobre" className='dropdown-item'  onClick= {() => {
+                                setMenu(!menu); setOther(false); setNavExpanded(false); setOtrino(!otrino);
                            }}>Nosotros</Link>
                             <Link to="/Trayectoria" className='dropdown-item' onClick= {() => {
-                                setMenu(!menu); setOther(false);
+                                setMenu(!menu); setOther(false); setNavExpanded(false); setOtrino(!otrino);
                            }}>Trayectoria</Link>
                             <Link to="/Trabajadores" className='dropdown-item' onClick= {() => {
-                                setMenu(!menu); setOther(false);
+                                setMenu(!menu); setOther(false); setNavExpanded(false); setOtrino(!otrino);
                            }}>Empleados</Link>
                             <Link to="/Cantidad" className='dropdown-item' onClick= {() => {
-                                setMenu(!menu); setOther(false);
+                                setMenu(!menu); setOther(false); setNavExpanded(false); setOtrino(!otrino);
                            }}>Animales <br></br>y Producción</Link>
                             <Link to="/Valores" className='dropdown-item' onClick= {() => {
-                                setMenu(!menu); setOther(false);
+                                setMenu(!menu); setOther(false); setNavExpanded(false); setOtrino(!otrino);
                            }}>Valores</Link>
                           
                         </NavDropdown>
-                        <NavDropdown title="Vacas" id="basic-nav-dropdown" show={other} onClick={()=> {setOther(!other); setMenu(false);}}>    
-                            <Link to='/Vacas' className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false);}}>Genetica de vacas </Link>
-                            <Link to="/Terneras" className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false);}}>Terneras</Link>
-                            <Link to="/Cuidado" className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false);}}>Cuidado de animales</Link>
+                        <NavDropdown title="Vacas" id="basic-nav-dropdown" show={other} onClick={()=> {setOther(!other);}}>    
+                            <Link to='/Vacas' className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false); setNavExpanded(false); setOtrino(!otrino);}}>Genetica de vacas </Link>
+                            <Link to="/Terneras" className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false); setNavExpanded(false); setOtrino(!otrino);}}>Terneras</Link>
+                            <Link to="/Cuidado" className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false); setNavExpanded(false); setOtrino(!otrino);}}>Cuidado de animales</Link>
                         </NavDropdown>
                             <li className='nav-item'>
-                            <Link to="/Leche" className='nav-link'>Leche</Link>
+                            <Link to="/Leche" className='nav-link' onClick={() => {setNavExpanded(false); setOtrino(!otrino);}}>Leche</Link>
                             </li>
                             <li className='nav-item'>
-                            <Link to="/Contáctenos" className='nav-link'>Contáctenos</Link>
+                            <Link to="/Contáctenos" className='nav-link' onClick={() => {setNavExpanded(false); setOtrino(!otrino);}}>Contáctenos</Link>
                             </li>
                             <div className='w-16'/>
                             
@@ -115,33 +117,33 @@ function App() {
   if(otrino === false){
     return(<Router className='w-full  '>
     <div>
-      <Navbar className='other' expand="lg" variant='dark' fixed='top'>
-      <div className='w-4 xl:w-12 lg:w-8 md:w-4 sm:w-2 hidden xl:block lg:block sm:block md:block'/>
+      <Navbar className='other' expand="lg" variant='dark' fixed='top' expanded={navExpanded}>
+      <div className='w-4 xl:w-12 lg:w-8 md:w-4 sm:w-2  xl:block lg:block sm:block md:block'/>
         <Navbar.Brand>
          <img src={img} className='object-fill h-12 xl:h-24 lg:h-20 md:h-16 sm:h-12' />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {setOtrino(!otrino)}}/>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {setOtrino(!otrino); setNavExpanded(!navExpanded);}}/>
         <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className={'basic-navbar-nav some'}>
+        <Nav className={'basic-navbar-nav'}>
         <li className='nav-item'>
-            <Link to="/" className='nav-link'>Inicio</Link>
+            <Link to="/" className='nav-link' onClick={() => {setOtrino(!otrino); setNavExpanded(!navExpanded)}}>Inicio</Link>
         </li>
         <NavDropdown title="Empresa" id="basic-nav-dropdown" data-toggle="dropdown" show={menu} onClick={() => {setMenu(!menu)}}>                          
           
           <Link to="/sobre" className='dropdown-item' onClick= {() => {
-                setMenu(!menu); setOther(false);
+                setMenu(!menu); setOther(false); setOtrino(!otrino); setNavExpanded(!navExpanded);
            }}>Nosotros</Link>
             <Link to="/Trayectoria" className='dropdown-item' onClick= {() => {
-                setMenu(!menu); setOther(false);
+                setMenu(!menu); setOther(false); setOtrino(!otrino); setNavExpanded(!navExpanded);
            }}>Trayectoria</Link>
             <Link to="/Trabajadores" className='dropdown-item' onClick= {() => {
-                setMenu(!menu); setOther(false);
+                setMenu(!menu); setOther(false); setOtrino(!otrino); setNavExpanded(!navExpanded);
            }}>Empleados</Link>
             <Link to="/Cantidad" className='dropdown-item' onClick= {() => {
-                setMenu(!menu); setOther(false);
+                setMenu(!menu); setOther(false); setOtrino(!otrino); setNavExpanded(!navExpanded);
            }}>Animales <br></br>y Producción</Link>
             <Link to="/Valores" className='dropdown-item' onClick= {() => {
-                setMenu(!menu); setOther(false);
+                setMenu(!menu); setOther(false); setOtrino(!otrino); setNavExpanded(!navExpanded);
            }}>Valores</Link>
           
         </NavDropdown>
@@ -151,10 +153,10 @@ function App() {
             <Link to="/Cuidado" className='dropdown-item' onClick={()=> {setOther(!other); setMenu(false);}}>Cuidado de animales</Link>
         </NavDropdown>
             <li className='nav-item'>
-            <Link to="/Leche" className='nav-link'>Leche</Link>
+            <Link to="/Leche" className='nav-link' onClick={()=> {setNavExpanded(!navExpanded); setOtrino(!otrino)}}>Leche</Link>
             </li>
             <li className='nav-item'>
-            <Link to="/Contáctenos" className='nav-link'>Contáctenos</Link>
+            <Link to="/Contáctenos" className='nav-link' onClick={()=> {setNavExpanded(!navExpanded); setOtrino(!otrino)}}>Contáctenos</Link>
             </li>
             <div className='w-16'/>
             

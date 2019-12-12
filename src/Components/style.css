@@ -69,6 +69,7 @@
         border-bottom: 1px;
     }
     div.nav-item:hoover{
+        color: #5E9F00 !important;
         background-color:  rgba(0, 0, 0, 0.80) !important;
     }
     .navbar-dark .nav-item:hover .nav-link{
